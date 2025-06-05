@@ -1,0 +1,42 @@
+# FBA Pipeline Configuration File
+
+# Paths
+paths:
+  input_path: "/path/to/your/bids/folder"
+  derivatives_path: "derivatives"  # relative to input_path or absolute path
+  sublist_file: "./sublist.txt"
+
+# BIDS naming convention
+bids:
+  session: "ses-1"
+  
+  # Phase encoding directions
+  # Specify which direction is your main DWI data and which is for distortion correction
+  main_pe_dir: "AP"        # Main diffusion data direction (AP or PA)
+  blipped_pe_dir: "PA"     # Blipped images for distortion correction (AP or PA)
+  
+  # File naming patterns (use {subject}, {session}, {pe_dir} as placeholders)
+  dwi_pattern: "{subject}_{session}_dir-{pe_dir}_dwi.nii.gz"
+  bval_pattern: "{subject}_{session}_dir-{pe_dir}_dwi.bval"
+  bvec_pattern: "{subject}_{session}_dir-{pe_dir}_dwi.bvec"
+
+# Processing parameters
+processing:
+  voxel_size: 1.25          # Upsampling voxel size
+  phase_encoding_dir: "AP"   # For dwifslpreproc (should match main_pe_dir usually)
+  
+  # Quality control thresholds
+  min_snr: 10               # Minimum acceptable SNR
+  
+  # Resume capability
+  enable_checkpoints: true
+  checkpoint_dir: "./fba_checkpoints"
+
+# Advanced options (optional)
+advanced:
+  # Eddy options for dwifslpreproc
+  eddy_options: "--slm=linear --cnr_maps"
+  
+  # Additional MRtrix3 options
+  force_overwrite: true
+  debug_mode: false
