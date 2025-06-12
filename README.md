@@ -28,7 +28,7 @@ bids/
 │           ├── sub-001_ses-1_dir-AP_dwi.nii.gz
 │           ├── sub-001_ses-1_dir-AP_dwi.bval
 │           ├── sub-001_ses-1_dir-AP_dwi.bvec
-│           └── sub-01_ses-1_dir-*.nii.gz (blip-down)
+│           └── sub-001_ses-1_dir-*.nii.gz (blip-down)
 ├── derivatives/
     ├── sub-01/
     ├── group-level/
