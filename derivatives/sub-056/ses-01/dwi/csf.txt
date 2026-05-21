@@ -1,0 +1,5 @@
+# Shells: 0,1000,2500
+# command_history: /sw/local/rocky8/noarch/rcc/software/mrtrix/3/bin/amp2response dwi.mif voxels_csf.mif safe_vecs.mif response_csf.txt -shells '0,1000,2500' -isotropic  (version=3.0.8)
+71638.8987225938
+4002.46908296806
+784.643168687335
