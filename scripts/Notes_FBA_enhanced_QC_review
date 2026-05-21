@@ -1,0 +1,58 @@
+Notes from FBA enhanced QC review (2026-05-19)
+
+=====================================
+SESSION 01
+=====================================
+
+PASS:
+  sub-013, sub-034, sub-053, sub-060, sub-062, sub-122, sub-126, sub-133
+
+PASS (with note):
+  sub-056 — low CNR (b1000=18.81, b2500=1.53) and prior denoising concerns, but visually OK
+  sub-059 — obliquity 25.7° (Tra>Cor(-25.6)>Sag(-0.8)), consistent across sessions
+            (ses-02 = 24.3°). Likely habitual head positioning. Eddy metrics acceptable
+            (abs_motion=0.66mm, outliers=0.73%). Monitor template registration.
+
+FAIL:
+  sub-052 — movement artifacts, banding-like artifacts
+  sub-063 — frontal lobe cutoff, motion artifacts
+  sub-064 — huge ventricles, cerebellum cutoff, denoising failed
+  sub-046 — cerebellum cutoff, acquisition coverage issue
+  sub-121 — movement artifacts, banding-like artifacts
+  sub-132 — movement artifacts, banding-like artifacts
+
+=====================================
+SESSION 02 
+=====================================
+
+PASS:
+  sub-055
+
+PASS (with note):
+  sub-035 — big ventricles, but obliquity normal (14.8°, consistent with ses-01 at 15.2°).
+            Ventricles are anatomical (likely atrophy — relevant for ALS cohort), not artifact.
+            Eddy QC excellent (CNR b1000=41.85, outliers=0.16%).
+  sub-141 — obliquity 32.7° (doubled from ses-01=16.9°). Different scan prescription at ses-02.
+            Despite extreme tilt, eddy metrics good (abs_motion=0.37mm, outliers=0.08%).
+            "Lots of eddy changes" expected given tilt angle. Verify template registration on HPC.
+  sub-142 — obliquity 37.7° (tripled from ses-01=12.0°). Most extreme in cohort.
+            Eddy metrics surprisingly good (abs_motion=0.42mm, outliers=0.34%, CNR b2500=3.88).
+            Verify template registration on HPC.
+
+FAIL:
+  sub-031
+
+=====================================
+Notes on obliquity pattern
+=====================================
+- Dataset mean obliquity: 12.5° (std 10.6°), range 0.5–46.5°
+- sub-141 and sub-142 both had normal obliquity in ses-01 but extreme obliquity in ses-02
+  → suggests different operator or auto-alignment at second visit
+- All subjects share identical core acquisition: PE=j-, TotalReadoutTime=0.0289563, MB=2, 7T Siemens
+
+=====================================
+Action items
+=====================================
+- Check template registration quality for sub-059, sub-141, sub-142 after FBA template step
+- sub-035 big ventricles: clinical finding, consider in statistical analyses
+- Confirm sub-064 and sub-046 exclusion in final participant lists
