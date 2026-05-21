@@ -1,3 +1,17 @@
 * annex.backend=MD5E
 **/.git* annex.largefiles=nothing
 * annex.largefiles=((mimeencoding=binary)and(largerthan=0))
+
+# MRtrix3 formats → always annex
+*.mif annex.largefiles=anything
+*.mif.gz annex.largefiles=anything
+*.tck annex.largefiles=anything
+
+# Compressed archives → annex
+*.zip annex.largefiles=anything
+
+# SLURM scripts → git (text)
+*.slurm annex.largefiles=nothing
+
+# Config files → git
+*.conf annex.largefiles=nothing

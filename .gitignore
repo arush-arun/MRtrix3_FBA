@@ -1,0 +1,19 @@
+# Temporary files
+*.swp
+*.swo
+*~
+.DS_Store
+*.pyc
+__pycache__/
+.~lock.*
+
+# Logs (large, regenerable)
+fba_logs/
+qsiprep_logs/
+
+# Claude internals
+.claude/
+
+# Scratch/temp
+scratch/
+tmp/
