@@ -11,6 +11,9 @@ __pycache__/
 fba_logs/
 qsiprep_logs/
 
+# QSIPrep (separate workflow)
+qsiprep_outputs/
+
 # Claude internals
 .claude/
 
