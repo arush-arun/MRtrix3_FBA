@@ -7,7 +7,7 @@
 # them from *_dir-PA_dwi.* to *_dir-PA_epi.* per BIDS convention.
 # The JSON sidecar also gets an IntendedFor field pointing to the AP DWI.
 
-BIDS_DIR="/home/uqahonne/uq/ALS/MeDALS_DWI/bids_data"
+BIDS_DIR="${BIDS_DIR:-$(dirname "$(dirname "$0")")/bids_data}"
 
 count=0
 for pa_nii in "$BIDS_DIR"/sub-*/ses-*/dwi/*_dir-PA_dwi.nii.gz; do

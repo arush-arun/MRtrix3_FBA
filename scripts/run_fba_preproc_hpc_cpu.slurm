@@ -1,14 +1,14 @@
 #!/bin/bash
 #SBATCH --job-name=fba_cpu
-#SBATCH --account=a_aibn
+#SBATCH --account=YOUR_ACCOUNT
 #SBATCH --partition=general
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 #SBATCH --time=08:00:00
-#SBATCH --output=/scratch/user/uqahonne/als/MeDALS_DWI/fba_logs/fba_%A_%a.out
-#SBATCH --error=/scratch/user/uqahonne/als/MeDALS_DWI/fba_logs/fba_%A_%a.err
+#SBATCH --output=fba_logs/fba_%A_%a.out
+#SBATCH --error=fba_logs/fba_%A_%a.err
 # ============================================================
 # MeDALS DWI — MRtrix3 FBA Preprocessing (Session 01)
 #
@@ -17,18 +17,14 @@
 #   sbatch --array=1-49 run_fba_preproc_hpc_cpu.slurm  # full batch
 # No GPU — uses eddy_cpu (no --estimate_move_by_susceptibility)
 #
-# Excluded subjects (ses-01):
-#   sub-140: missing both AP and PA files for ses-01
-#
-# Previously excluded, now fixed:
-#   sub-113: had 2 PA runs, run-1 moved to fmap/
-#   sub-118, sub-121, sub-122: PA fieldmaps relabeled
-# Total: 49 subjects in participant_list_ses01.txt
+# Subjects with missing or mislabeled fieldmaps were excluded or fixed
+# before processing. See participant_list_ses01.txt for final list.
 # ============================================================
 
 # Directories
-SCRIPTS_DIR="/scratch/user/uqahonne/als/MeDALS_DWI/scripts"
-LOG_DIR="/scratch/user/uqahonne/als/MeDALS_DWI/fba_logs"
+# Update these paths for your environment
+SCRIPTS_DIR="${SLURM_SUBMIT_DIR:-$(dirname "$0")}"
+LOG_DIR="$(dirname "$SCRIPTS_DIR")/fba_logs"
 
 mkdir -p "$LOG_DIR"
 

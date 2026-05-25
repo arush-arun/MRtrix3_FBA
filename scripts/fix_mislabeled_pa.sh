@@ -1,11 +1,19 @@
 #!/bin/bash
-# Fix mislabeled PA b0 files for sub-118, sub-121, sub-122 (ses-01)
-# These have the PA b0 incorrectly labeled as dir-AP instead of dir-PA
+# Fix mislabeled PA b0 files where the PA b0 is incorrectly labeled as dir-AP
 # This script renames them to dir-PA and moves them to fmap/ as epi fieldmaps
+#
+# Usage: bash fix_mislabeled_pa.sh <subject_number> [subject_number ...]
+#   e.g.: bash fix_mislabeled_pa.sh 118 121 122
 
-BIDS_DIR="/home/uqahonne/uq/ALS/MeDALS_DWI/bids_data"
+BIDS_DIR="${BIDS_DIR:-$(dirname "$(dirname "$0")")/bids_data}"
 
-for sub_num in 118 121 122; do
+if [[ $# -eq 0 ]]; then
+    echo "Usage: $0 <subject_number> [subject_number ...]"
+    echo "  e.g.: $0 118 121 122"
+    exit 1
+fi
+
+for sub_num in "$@"; do
     sub="sub-${sub_num}"
     ses="ses-01"
     dwi_dir="${BIDS_DIR}/${sub}/${ses}/dwi"

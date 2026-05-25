@@ -6,12 +6,12 @@
 #   bash review_fba_qc_enhanced.sh <derivatives_dir> <participant_list> [session] [opacity]
 #
 # Example (single session):
-#   bash review_fba_qc_enhanced.sh /scratch/user/uqahonne/als/MeDALS_DWI/derivatives \
-#        /scratch/user/uqahonne/als/MeDALS_DWI/scripts/participant_list_ses02.txt ses-02
+#   bash review_fba_qc_enhanced.sh /path/to/derivatives \
+#        /path/to/scripts/participant_list_ses02.txt ses-02
 #
 # Example (mixed sessions — use session|subject format in participant list):
-#   bash review_fba_qc_enhanced.sh /scratch/user/uqahonne/als/MeDALS_DWI/derivatives \
-#        /scratch/user/uqahonne/als/MeDALS_DWI/scripts/participant_list_enhanced_review.txt
+#   bash review_fba_qc_enhanced.sh /path/to/derivatives \
+#        /path/to/scripts/participant_list_enhanced_review.txt
 #
 # For each subject, launches mrview with 8 sequential views:
 #   1. Raw DWI (data.mif) — check acquisition quality, signal dropout

@@ -7,9 +7,11 @@
 
 set -euo pipefail
 
-DERIVATIVES="/scratch/user/uqahonne/als/MeDALS_DWI/derivatives"
-CHECKPOINTS="/scratch/user/uqahonne/als/MeDALS_DWI/fba_checkpoints"
-PARTICIPANT_LIST="/scratch/user/uqahonne/als/MeDALS_DWI/scripts/participant_list_ses01.txt"
+# Update these paths for your environment
+PROJECT_DIR="${PROJECT_DIR:-$(dirname "$(dirname "$0")")}"
+DERIVATIVES="${PROJECT_DIR}/derivatives"
+CHECKPOINTS="${PROJECT_DIR}/fba_checkpoints"
+PARTICIPANT_LIST="${PROJECT_DIR}/scripts/participant_list_ses01.txt"
 SESSION="ses-01"
 
 if [[ ! -f "$PARTICIPANT_LIST" ]]; then

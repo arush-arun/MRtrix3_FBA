@@ -14,11 +14,13 @@ module use /sw/local/rocky8/noarch/neuro/software/neurocommand/local/containers/
 export APPTAINER_BINDPATH=/scratch,/QRISdata
 ml fsl/6.0.7.9
 
-DERIVATIVES="/scratch/user/uqahonne/als/MeDALS_DWI/derivatives"
-LOG_DIR="/scratch/user/uqahonne/als/MeDALS_DWI/fba_logs"
-PARTICIPANT_LIST="/scratch/user/uqahonne/als/MeDALS_DWI/scripts/participant_list_ses01.txt"
+# Update these paths for your environment
+PROJECT_DIR="${PROJECT_DIR:-$(dirname "$(dirname "$0")")}"
+DERIVATIVES="${PROJECT_DIR}/derivatives"
+LOG_DIR="${PROJECT_DIR}/fba_logs"
+PARTICIPANT_LIST="${PROJECT_DIR}/scripts/participant_list_ses01.txt"
 SESSION="ses-01"
-QC_OUTPUT="/scratch/user/uqahonne/als/MeDALS_DWI/fba_qc_summary.csv"
+QC_OUTPUT="${PROJECT_DIR}/fba_qc_summary.csv"
 
 JOB_ID="${1:-}"
 
