@@ -1,0 +1,38 @@
+# Temporary files
+*.swp
+*.swo
+*~
+.DS_Store
+*.pyc
+__pycache__/
+.~lock.*
+
+# Logs
+fba_logs/
+qsiprep_logs/
+
+# Claude internals
+.claude/
+
+# Scratch/temp
+scratch/
+tmp/
+
+# Subject data (private)
+bids_data/
+derivatives/
+data/
+qsiprep_outputs/
+medals/
+
+# Subject-specific files
+scripts/participant_list_*.txt
+scripts/Notes_FBA_enhanced_QC_review
+scripts/review_raw_dwi.sh
+scripts/plot_fba_qc.py
+
+# QSIPrep (separate workflow)
+scripts/qc_qsiprep_medals.py
+scripts/run_qsiprep_medals.slurm
+scripts/run_qsiprep_medals_v26.slurm
+scripts/run_qsiprep_qc_hpc.slurm
