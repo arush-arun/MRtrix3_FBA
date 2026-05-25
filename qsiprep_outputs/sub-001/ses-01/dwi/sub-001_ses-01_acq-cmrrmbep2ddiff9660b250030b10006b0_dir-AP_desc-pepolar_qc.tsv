@@ -1,9 +1,0 @@
-bids_origin_file	original_volume	fsl_spec	qc_score	qc_rank	selected_for_sdc
-/scratch/user/uqahonne/als/MeDALS_DWI/bids/sub-001/ses-01/dwi/sub-001_ses-01_acq-cmrrmbep2ddiff9660b250030b10006b0_dir-AP_dwi.nii.gz	0	0 -1 0 0.028956	-0.9799697655225995	6	False
-/scratch/user/uqahonne/als/MeDALS_DWI/bids/sub-001/ses-01/dwi/sub-001_ses-01_acq-cmrrmbep2ddiff9660b250030b10006b0_dir-AP_dwi.nii.gz	1	0 -1 0 0.028956	-0.981341736837423	5	False
-/scratch/user/uqahonne/als/MeDALS_DWI/bids/sub-001/ses-01/dwi/sub-001_ses-01_acq-cmrrmbep2ddiff9660b250030b10006b0_dir-AP_dwi.nii.gz	17	0 -1 0 0.028956	-0.9823958724717752	4	False
-/scratch/user/uqahonne/als/MeDALS_DWI/bids/sub-001/ses-01/dwi/sub-001_ses-01_acq-cmrrmbep2ddiff9660b250030b10006b0_dir-AP_dwi.nii.gz	33	0 -1 0 0.028956	-0.9842396540391092	3	False
-/scratch/user/uqahonne/als/MeDALS_DWI/bids/sub-001/ses-01/dwi/sub-001_ses-01_acq-cmrrmbep2ddiff9660b250030b10006b0_dir-AP_dwi.nii.gz	49	0 -1 0 0.028956	-0.988164869183734	0	True
-/scratch/user/uqahonne/als/MeDALS_DWI/bids/sub-001/ses-01/dwi/sub-001_ses-01_acq-cmrrmbep2ddiff9660b250030b10006b0_dir-AP_dwi.nii.gz	65	0 -1 0 0.028956	-0.9878378068435958	1	False
-/scratch/user/uqahonne/als/MeDALS_DWI/bids/sub-001/ses-01/dwi/sub-001_ses-01_acq-cmrrmbep2ddiff9660b250030b10006b0_dir-AP_dwi.nii.gz	81	0 -1 0 0.028956	-0.9844829822931729	2	False
-/scratch/user/uqahonne/als/MeDALS_DWI/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-cmrrmbep2ddiffB0PA_dir-PA_epi.nii.gz	0	0 1 0 0.023007		0	True
