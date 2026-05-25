@@ -1,0 +1,30 @@
+# Temporary files
+*.swp
+*.swo
+*~
+.DS_Store
+*.pyc
+__pycache__/
+.~lock.*
+
+# Logs (large, regenerable)
+fba_logs/
+qsiprep_logs/
+
+# QSIPrep (separate workflow)
+qsiprep_outputs/
+
+# Claude internals
+.claude/
+
+# Scratch/temp
+scratch/
+tmp/
+
+# QSIPrep scripts (separate workflow)
+scripts/qc_qsiprep_medals.py
+scripts/run_qsiprep_medals.slurm
+scripts/run_qsiprep_medals_v26.slurm
+scripts/run_qsiprep_qc_hpc.slurm
+data/qsiprep_qc_metrics.csv
+data/qsiprep_qc_summary.txt

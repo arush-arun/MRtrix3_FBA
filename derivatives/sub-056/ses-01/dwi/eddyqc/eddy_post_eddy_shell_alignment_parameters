@@ -1,0 +1,41 @@
+These between shell parameters were calculated using MI between shell means
+Movement parameters relative b0-shell from direct registration to mean b0
+Shell 1e+03 to b0-shell
+ x-tr (mm) y-tr (mm) z-tr (mm) x-rot (deg) y-rot (deg) z-rot (deg)
+      0.04    0.0903     0.119      -0.155     -0.0354       0.101
+Shell 2.5e+03 to b0-shell
+ x-tr (mm) y-tr (mm) z-tr (mm) x-rot (deg) y-rot (deg) z-rot (deg)
+     0.101     0.296     0.116      -0.158     -0.0167       0.117
+
+Relative movement parameters between the shells
+Shell 2.5e+03 to shell 1e+03
+ x-tr (mm) y-tr (mm) z-tr (mm) x-rot (deg) y-rot (deg) z-rot (deg)
+    0.0511     0.224    0.0209     -0.0226     0.00541      0.0234
+
+Deduced movement parameters relative b0-shell
+Shell 1e+03 to b0-shell
+ x-tr (mm) y-tr (mm) z-tr (mm) x-rot (deg) y-rot (deg) z-rot (deg)
+      0.04    0.0903     0.119      -0.155     -0.0354       0.101
+Shell 2.5e+03 to b0-shell
+ x-tr (mm) y-tr (mm) z-tr (mm) x-rot (deg) y-rot (deg) z-rot (deg)
+     0.101     0.296     0.116      -0.158     -0.0167       0.117
+
+
+These between shell parameters were calculated using interspersed b0-volumes
+Movement parameters relative b0-shell
+Shell 1e+03 to b0-shell
+ x-tr (mm) y-tr (mm) z-tr (mm) x-rot (deg) y-rot (deg) z-rot (deg)
+      -nan      -nan      -nan        -nan        -nan        -nan
+Shell 2.5e+03 to b0-shell
+ x-tr (mm) y-tr (mm) z-tr (mm) x-rot (deg) y-rot (deg) z-rot (deg)
+    0.0179    -0.121     0.168      -0.335   -0.000518       0.137
+
+
+These are the movement parameters that have been applied to the data
+
+Shell 1e+03 to b0-shell
+ x-tr (mm) y-tr (mm) z-tr (mm) x-rot (deg) y-rot (deg) z-rot (deg)
+      0.04    0.0903     0.119      -0.155     -0.0354       0.101
+Shell 2.5e+03 to b0-shell
+ x-tr (mm) y-tr (mm) z-tr (mm) x-rot (deg) y-rot (deg) z-rot (deg)
+     0.101     0.296     0.116      -0.158     -0.0167       0.117
